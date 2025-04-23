@@ -84,8 +84,8 @@ def organize_train_files(selected_imgs, img, img_path):
         img.append(read_images(img_path, image_file))  
 
 
-input_path = "dataset3/train/Masks"
-output_path = "dataset3/train/labels"
+input_path = "dataset4/resized/train/mask"
+output_path = "dataset4/resized/train/labels"
 
 # Create output directory if it doesn't exist
 os.makedirs(output_path, exist_ok=True)
@@ -98,11 +98,12 @@ for mask_name in os.listdir(input_path):
     objects_info = process_mask(mask_path)
     write_yolo_annotations(output_path, image_name, objects_info)
 
-
+#3514 para treino e 391 de artificial
+#2600 para validacao e 289 de artificial
 print("Indo para validação\n\n")
 
-input_path = "dataset3/val/Masks"
-output_path = "dataset3/val/labels"
+input_path = "dataset4/resized/val/mask"
+output_path = "dataset4/resized/val/labels"
 
 # Create output directory if it doesn't exist
 os.makedirs(output_path, exist_ok=True)
