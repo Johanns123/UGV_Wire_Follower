@@ -225,7 +225,7 @@ if __name__ == '__main__':
     try:
         controller = RobotController()
 
-        mapa = ler_mapa("pontuacoes.txt")
+        mapa = ler_mapa("mapa_potencial.txt")
 
         linha = len(mapa)
         coluna = len(mapa[0])
@@ -238,8 +238,8 @@ if __name__ == '__main__':
         print("Coordenadas centrais do mapa txt", centro)
 
         # Definindo os pontos de início e objetivo (na ordem convencional)
-        inicio = [0, 0]  # Coordenadas centrais
-        objetivo = [8, -4]  # Coordenadas centrais
+        inicio = [10, 12]  # Coordenadas centrais
+        objetivo = [10, 14]  # Coordenadas centrais
 
         x_mapa_inicio = centro[0] + inicio[0]
         y_mapa_inicio = centro[1] - inicio[1]
